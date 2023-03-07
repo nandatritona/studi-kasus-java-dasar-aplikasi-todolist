@@ -1,7 +1,7 @@
 public class AplikasiTodoList {
     public static String[] model = new String[10];
     public static void main(String[] args) {
-        testAddTodoList();
+        testremoveTodoList();
     }
 
     /**
@@ -75,7 +75,7 @@ public class AplikasiTodoList {
             return false;
         } else {
             for (int i = (number - 1); i < model.length; i++) {
-                if (i == (model.length) -1 ) {
+                if (i == (model.length) - 1 ) {
                     model[i] = null;
                 } else {
                     model[i] = model[i + 1];
@@ -83,6 +83,25 @@ public class AplikasiTodoList {
             }
             return true;
         }
+    }
+
+    public static void testremoveTodoList() {
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+        addTodoList("Empat");
+        addTodoList("Lima");
+
+        var result = removeTodoList(20);
+        System.out.println(result);
+
+        result = removeTodoList(6);
+        System.out.println(result);
+
+        result = removeTodoList(2);
+        System.out.println(result);
+
+        showTodoList();
     }
 
     /**
