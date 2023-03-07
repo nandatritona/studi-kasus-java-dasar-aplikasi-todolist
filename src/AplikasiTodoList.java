@@ -2,13 +2,14 @@ public class AplikasiTodoList {
     public static String[] model = new String[10];
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
     public static void main(String[] args) {
-        testInput();
+        testViewShowTodoList();
     }
 
     /**
      * Menampilkan todo list
      */
     public static void showTodoList() {
+        System.out.println("TODOLIST");
         for (var i = 0; i < model.length; i++) {
             var todo = model[i];
             var no = i + 1;
@@ -143,6 +144,15 @@ public class AplikasiTodoList {
                 System.out.println("Pilihan tidak dimengerti");
             }
         }
+    }
+
+    public static void testViewShowTodoList() {
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+        addTodoList("Empat");
+        addTodoList("Lima");
+        viewShowTodoList();
     }
 
     /**
