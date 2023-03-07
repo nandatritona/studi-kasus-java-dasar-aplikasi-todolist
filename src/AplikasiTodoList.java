@@ -85,7 +85,7 @@ public class AplikasiTodoList {
         }
     }
 
-    public static void testremoveTodoList() {
+    public static void testRemoveTodoList() {
         addTodoList("Satu");
         addTodoList("Dua");
         addTodoList("Tiga");
